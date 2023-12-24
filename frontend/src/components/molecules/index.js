@@ -1,4 +1,6 @@
-import BreadCrumbs from './BreadCrumbs'
-import AdminNav from './AdminNav'
+export * from './admin'
 
-export { BreadCrumbs, AdminNav }
+import BreadCrumbs from './BreadCrumbs'
+import PageBreak from './PageBreak'
+
+export { BreadCrumbs, PageBreak }

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { AdminNav } from '../../components'
+import { AdminNav, Title } from '../../components'
 
 const MainAdmin = () => {
   return (
-    <div>
-      MainAdmin
+    <div className='mb-8 min-h-screen'>
       <AdminNav />
-      <Outlet />
+      <div className='container mx-auto p-4'>
+        <Outlet />
+      </div>
     </div>
   )
 }

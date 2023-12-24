@@ -6,15 +6,19 @@ import {
   useLocation,
 } from 'react-router-dom'
 import {
-  Home,
+  MainApp,
+  MainAdmin,
   Admin,
+  Home,
   About,
   Academic,
   Users,
   Posts,
-  MainAdmin,
+  Admission,
+  Organization,
+  Achievment,
+  News,
 } from '../../pages'
-import MainApp from '../../pages/MainApp'
 
 const MyRoute = () => {
   return (
@@ -29,6 +33,10 @@ const MyRoute = () => {
           </Route>
           <Route path='tentang-kami' element={<About />} />
           <Route path='akademik' element={<Academic />} />
+          <Route path='pendaftaran' element={<Admission />} />
+          <Route path='organisasi' element={<Organization />} />
+          <Route path='prestasi' element={<Achievment />} />
+          <Route path='berita' element={<News />} />
         </Route>
       </Routes>
     </Router>

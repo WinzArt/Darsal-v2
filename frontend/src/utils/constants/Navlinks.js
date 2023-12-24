@@ -89,20 +89,20 @@ export const footerNav = [
 export const adminNav = [
   {
     id: 'dashboard',
-    to: ' ',
+    to: '',
     title: 'Dashboard',
     icon: 'mdi:view-dashboard',
-  },
-  {
-    id: 'users',
-    to: 'kelola-users',
-    title: 'Users',
-    icon: 'mdi:account-group',
   },
   {
     id: 'berita',
     to: 'kelola-berita',
     title: 'Berita',
     icon: 'mdi:newspaper-variant',
+  },
+  {
+    id: 'users',
+    to: 'kelola-users',
+    title: 'Users',
+    icon: 'mdi:account-group',
   },
 ]
