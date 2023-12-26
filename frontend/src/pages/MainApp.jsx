@@ -16,7 +16,11 @@ const MainApp = () => {
     <div id='mainApp' className='min-h-screen w-full'>
       <Navbar />
       {isHome ? (
-        <Jumbotron />
+        <Jumbotron
+          next='jumbotron-next'
+          prev='jumbotron-prev'
+          isJumbotron={true}
+        />
       ) : (
         <Hero
           image={heroData.image}
@@ -27,7 +31,7 @@ const MainApp = () => {
       <main
         className={` ${
           !isHome ? styles.paddingX : styles.padding
-        } min-h-screen`}
+        } min-h-screen overflow-x-hidden`}
       >
         {!isHome && <BreadCrumbs />}
         <Outlet />

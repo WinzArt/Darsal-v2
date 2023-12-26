@@ -44,6 +44,10 @@ body {
   @apply bg-teal-500;
 }
 
+.slider-controler div {
+  @apply h-10 w-10 rounded-md  p-1 shadow shadow-black/40 backdrop-blur-sm after:hidden;
+}
+
 .icon-prev {
   @apply duration-200 hover:scale-110 active:-translate-x-2 active:scale-75 active:text-teal-500;
 }

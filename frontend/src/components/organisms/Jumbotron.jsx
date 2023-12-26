@@ -10,9 +10,9 @@ import { Icon } from '@iconify/react'
 
 import { jumbotron } from '../../utils'
 import { styles } from '../../styles'
-import { PageBreak } from '../molecules'
+import { PageBreak, SliderController } from '../molecules'
 
-const Jumbotron = () => {
+const Jumbotron = ({ next, prev, isJumbotron }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
@@ -32,15 +32,15 @@ const Jumbotron = () => {
           disableOnInteraction: false,
         }}
         navigation={{
-          nextEl: '.hero-next',
-          prevEl: '.hero-prev',
+          nextEl: `.${next}`,
+          prevEl: `.${prev}`,
           clickable: true,
         }}
         onSlideChange={(swiperCore) => {
           const { realIndex } = swiperCore
           setActiveIndex(realIndex)
         }}
-        className='swiper_container'
+        className='swiper_container relative'
       >
         {jumbotron.map((swiper, i) => (
           <SwiperSlide key={i}>
@@ -48,38 +48,29 @@ const Jumbotron = () => {
               style={{
                 backgroundImage: `url(${swiper.image})`,
               }}
-              className='relative h-screen w-full bg-cover bg-center brightness-50'
+              className='h-screen w-full bg-cover bg-center brightness-50'
             ></div>
             <PageBreak
               quote={swiper.qoute}
               text={swiper.text}
               className={`${
                 styles.padding
-              } absolute bottom-0 text-white transition-all delay-700 duration-700 ease-in md:justify-start ${
+              } absolute bottom-0 w-full text-white transition-all delay-700 duration-700 ease-in xl:container md:justify-start ${
                 i === activeIndex
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-full opacity-0'
               }`}
               link={true}
+              isJumbotron={isJumbotron}
             />
           </SwiperSlide>
         ))}
-        <div className='slider-controler absolute bottom-64 right-4 w-20 sm:bottom-72 sm:right-8 md:bottom-80'>
-          <div className='swiper-button-prev hero-prev slider-arrow mt-4 h-10 w-10 rounded-md border-b-4 text-white after:hidden md:mt-8 '>
-            <Icon
-              icon='solar:double-alt-arrow-left-broken'
-              className='icon-prev'
-            />
-          </div>
-          {/* <div className='swiper-pagination'></div> */}
-          <div className='swiper-button-next hero-next slider-arrow h-10 w-10 rounded-md border-t-4 text-white after:hidden'>
-            <Icon
-              icon='solar:double-alt-arrow-right-broken'
-              vFlip={true}
-              className='icon-next'
-            />
-          </div>
-        </div>
+        <SliderController
+          isJumbotron={isJumbotron}
+          next={next}
+          prev={prev}
+          className='bottom-64 right-4 w-20 sm:bottom-80 sm:right-8 md:bottom-80'
+        />
       </Swiper>
     </div>
   )
