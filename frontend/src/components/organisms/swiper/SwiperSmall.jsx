@@ -6,7 +6,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import { Icon } from '@iconify/react'
 import { hero } from '../../../utils'
 import { SliderController } from '../../molecules'
 

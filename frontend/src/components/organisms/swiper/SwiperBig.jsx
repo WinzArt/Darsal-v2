@@ -7,7 +7,6 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import { Icon } from '@iconify/react'
 import { hero } from '../../../utils'
 import { SliderController } from '../../molecules'
 
@@ -22,26 +21,20 @@ const SwiperBig = ({ next, prev, isSwiperBig }) => {
         grabCursor={false}
         centeredSlides={true}
         loop={true}
-        spaceBetween='25'
-        slidesPerView={'1.3'}
-        // allowTouchMove={true}
+        spaceBetween={'0'}
+        slidesPerView={'1.1'}
         speed={700}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
-          depth: 0,
-          modifier: 1,
+          depth: 300,
+          modifier: 2,
+          scale: 0.75,
           slideShadows: false,
         }}
         breakpoints={{
-          320: {
-            spaceBetween: 25,
-          },
           640: {
-            spaceBetween: 30,
-          },
-          1280: {
-            spaceBetween: 100,
+            slidesPerView: 2,
           },
         }}
         navigation={{
@@ -56,7 +49,7 @@ const SwiperBig = ({ next, prev, isSwiperBig }) => {
           const { realIndex } = swiperCore
           setActiveIndex(realIndex)
         }}
-        className='swiper_container'
+        className='swiper_container bg-gradient-to-t from-teal-200 to-transparent'
       >
         {hero.map((swiper, i) => (
           <SwiperSlide key={i} className=''>
@@ -64,7 +57,7 @@ const SwiperBig = ({ next, prev, isSwiperBig }) => {
               style={{
                 backgroundImage: `url(${swiper.image})`,
               }}
-              className={`relative my-10 flex aspect-square rounded-xl bg-cover bg-center shadow-xl shadow-black/50 brightness-75 sm:aspect-video ${
+              className={`my-10 flex aspect-square rounded-xl bg-cover bg-center shadow-xl shadow-black/50 brightness-75 sm:aspect-video ${
                 i === activeIndex ? '' : 'blur-sm'
               }`}
             ></div>

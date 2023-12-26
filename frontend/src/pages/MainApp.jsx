@@ -31,7 +31,7 @@ const MainApp = () => {
       <main
         className={` ${
           !isHome ? styles.paddingX : styles.padding
-        } min-h-screen overflow-x-hidden`}
+        } mb-16 min-h-screen overflow-x-hidden`}
       >
         {!isHome && <BreadCrumbs />}
         <Outlet />

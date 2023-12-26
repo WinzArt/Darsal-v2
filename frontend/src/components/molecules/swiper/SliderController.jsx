@@ -15,7 +15,7 @@ const SliderController = ({
       <div
         className={`${next} swiper-button-next ${
           isSwiperBig
-            ? 'mr-2 border-2 border-cyan-500 text-cyan-500 sm:mr-6'
+            ? 'mr-2 border-2 sm:mr-6 md:border-black md:text-black'
             : 'border-t-2'
         } ${
           isJumbotron
@@ -32,7 +32,7 @@ const SliderController = ({
       <div
         className={`${prev} swiper-button-prev ${
           isSwiperBig
-            ? 'ml-2 border-2 border-cyan-500 text-cyan-500 sm:ml-6'
+            ? 'ml-2 border-2 border-black text-black sm:ml-6'
             : 'mt-8 border-b-2'
         } ${
           isJumbotron ? 'text-white md:text-white' : 'border-black text-black'

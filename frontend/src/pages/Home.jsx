@@ -1,5 +1,4 @@
 import React from 'react'
-import { styles } from '../styles'
 import { batik, logoDarsal } from '../assets'
 import { PageBreak, SwiperBig, SwiperSmall } from '../components'
 
@@ -31,12 +30,26 @@ const Home = () => {
         text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
         className='md:justify-end'
       />
-      <div className='relative mb-10 sm:mb-0'>
+      <div className='relative mb-10 drop-shadow-md sm:mb-0'>
         <div
           style={{
             backgroundImage: `url(${batik})`,
           }}
-          className='absolute -left-10 -top-14 h-full w-screen rounded-tl-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:left-5'
+          className='absolute -left-10 -top-14 h-full w-screen rounded-l-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:left-5'
+        ></div>
+        <SwiperSmall next='home-next3' prev='home-prev3' />
+      </div>
+      <PageBreak
+        quote='Mengenal SMK Darusaalam'
+        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
+        className='md:justify-end'
+      />
+      <div className='relative mb-10 drop-shadow-md sm:mb-0'>
+        <div
+          style={{
+            backgroundImage: `url(${batik})`,
+          }}
+          className='absolute -bottom-14 -right-10 h-1/3 w-screen rounded-r-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:right-5'
         ></div>
         <SwiperSmall next='home-next3' prev='home-prev3' />
       </div>
