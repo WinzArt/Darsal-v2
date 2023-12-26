@@ -67,8 +67,7 @@ const Admin = () => {
                 <td className='w-1/12 p-4 text-center'>1</td>
                 <td className='w-1/2 p-4'>
                   Judul berita yang dibuat lebih panjang untuk melihat
-                  tampilanya masih ditambah panjang. Judul berita yang dibuat
-                  lebih panjang untuk melihat tampilanya masih ditambah panjang.
+                  tampilanya masih ditambah panjang.
                 </td>
                 <td scope='row' className='flex w-1/2 items-center gap-1 p-4'>
                   <img

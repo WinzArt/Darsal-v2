@@ -1,3 +1,5 @@
+export * from './swiper'
+
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Jumbotron from './Jumbotron'
