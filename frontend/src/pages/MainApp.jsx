@@ -13,7 +13,7 @@ const MainApp = () => {
   const heroData = currentHero || {}
 
   return (
-    <div id='mainApp' className='min-h-screen w-full'>
+    <div id='mainApp' className='min-h-screen w-full overflow-x-hidden'>
       <Navbar />
       {isHome ? (
         <Jumbotron
@@ -28,11 +28,7 @@ const MainApp = () => {
           text={heroData.text}
         />
       )}
-      <main
-        className={` ${
-          !isHome ? styles.paddingX : styles.padding
-        } mb-16 min-h-screen overflow-x-hidden`}
-      >
+      <main className={` ${styles.padding} min-h-screen md:container`}>
         {!isHome && <BreadCrumbs />}
         <Outlet />
       </main>

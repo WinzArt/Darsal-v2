@@ -21,12 +21,12 @@ const SwiperBig = ({ next, prev, isSwiperBig }) => {
         grabCursor={false}
         centeredSlides={true}
         loop={true}
-        spaceBetween={'0'}
+        spaceBetween={'-100'}
         slidesPerView={'1.1'}
         speed={700}
         coverflowEffect={{
           rotate: 30,
-          stretch: 0,
+          stretch: -15,
           depth: 300,
           modifier: 2,
           scale: 0.75,

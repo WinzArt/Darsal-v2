@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 import { hero } from '../../../utils'
 import { SliderController } from '../../molecules'
 
-const SwiperSmall = ({ next, prev }) => {
+const SwiperSmall = ({ next, prev, imageList }) => {
   const breakPoints = {
     320: {
       slidesPerView: 2.1,
@@ -35,7 +35,7 @@ const SwiperSmall = ({ next, prev }) => {
         }}
         className='swiper_container max-w-6xl rounded-lg shadow-lg shadow-black/50 2xl:max-w-full'
       >
-        {hero.map((swiper, i) => (
+        {(imageList ?? hero).map((swiper, i) => (
           <SwiperSlide key={i}>
             <div
               style={{
@@ -44,11 +44,11 @@ const SwiperSmall = ({ next, prev }) => {
               className='relative aspect-2/3 w-full bg-cover bg-center brightness-75'
             ></div>
             <div className='group absolute inset-0 flex aspect-2/3 w-full cursor-default items-center px-4 text-white duration-1000 hover:backdrop-blur-sm'>
-              <div className='relative inset-y-1/2 transition-all duration-300 ease-in-out group-hover:inset-y-0'>
+              <div className='relative inset-y-1/2 h-1/2 transition-all duration-300 ease-in-out group-hover:inset-y-0'>
                 <h1 className='text-xl font-semibold'>{swiper.title}</h1>
                 <div className='opacity-0 duration-500 group-hover:opacity-100'>
-                  <hr className='m-4' />
-                  <p>{swiper.text}</p>
+                  <hr className='my-4' />
+                  <p className='tracking-tighter'>{swiper.text}</p>
                 </div>
               </div>
             </div>

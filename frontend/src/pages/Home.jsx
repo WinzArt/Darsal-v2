@@ -4,7 +4,7 @@ import { PageBreak, SwiperBig, SwiperSmall } from '../components'
 
 const Home = () => {
   return (
-    <div className='container mx-auto flex flex-col gap-20'>
+    <div className=' flex flex-col gap-20'>
       <div className='mx-auto flex max-w-md flex-col items-center gap-4 md:max-w-lg'>
         <img
           src={logoDarsal}
@@ -51,7 +51,7 @@ const Home = () => {
           }}
           className='absolute -bottom-14 -right-10 h-1/3 w-screen rounded-r-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:right-5'
         ></div>
-        <SwiperSmall next='home-next3' prev='home-prev3' />
+        <SwiperSmall next='home-next4' prev='home-prev4' />
       </div>
     </div>
   )

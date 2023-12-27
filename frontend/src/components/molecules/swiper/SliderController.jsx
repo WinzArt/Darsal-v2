@@ -13,15 +13,13 @@ const SliderController = ({
       className={`${className} slider-controler ${isSwiperBig ?? 'absolute'} `}
     >
       <div
-        className={`${next} swiper-button-next ${
+        className={`${next} swiper-button-next border-t-2 ${
           isSwiperBig
-            ? 'mr-2 border-2 sm:mr-6 md:border-black md:text-black'
-            : 'border-t-2'
-        } ${
-          isJumbotron
-            ? 'text-white md:text-white'
-            : 'border-cyan-500 text-cyan-500'
-        }`}
+            ? 'mr-2 border-2 border-black text-black sm:mr-6'
+            : isJumbotron
+              ? ' border-white text-white'
+              : 'border-cyan-500 text-cyan-500 md:border-black md:text-black'
+        } `}
       >
         <Icon
           icon='solar:double-alt-arrow-right-broken'
