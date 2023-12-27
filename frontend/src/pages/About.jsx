@@ -1,5 +1,5 @@
 import React from 'react'
-import { batik, logoDarsal } from '../assets'
+import { logoDarsal } from '../assets'
 import { ImgFrame, PageBreak, SwiperSmall } from '../components'
 import { aboutSwiper } from '../utils'
 
@@ -7,16 +7,15 @@ const About = () => {
   return (
     <div className='flex flex-col gap-20'>
       <div className='flex flex-col gap-4 md:block'>
-        <h1 className='mb-6 text-4xl font-extrabold'>
-          Profil <br />
-          SMK Darussalam
+        <h1 className='my-8 text-6xl font-extrabold text-emerald-700'>
+          Profil
         </h1>
         <ImgFrame
           image={logoDarsal}
           caption='Image Caption'
           className='order-last float-right md:order-none md:ml-8 md:max-w-xl'
         />
-        <p className='clear-left text-justify indent-16 text-lg font-medium leading-relaxed'>
+        <p className='clear-left text-justify indent-16 text-lg font-medium leading-relaxed tracking-tight'>
           Sekolah Menengah Kejuruan (SMK) Darussalam didirikan pada tahun 2009
           dengan SK Pendirian Nomor 800/1666-Dispen 2009 di Kota Tangerang
           Selatan Provinsi Banten atas Prakarsa Ketua Yayasan Pendidikan Islam
@@ -65,6 +64,12 @@ const About = () => {
         prev='about-prev1'
         imageList={aboutSwiper}
       />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quasi
+        minima, adipisci ab dolorem sit quae itaque nulla repudiandae
+        reprehenderit quidem! Nostrum esse necessitatibus quod suscipit, dicta
+        incidunt omnis dolores!
+      </p>
       <div className='flex flex-col items-center gap-4'>
         <h1 className='mb-6 text-center text-2xl font-bold'>
           Struktur Organisasi <br /> SMK Darussalam

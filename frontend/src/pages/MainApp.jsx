@@ -28,7 +28,11 @@ const MainApp = () => {
           text={heroData.text}
         />
       )}
-      <main className={` ${styles.padding} min-h-screen md:container`}>
+      <main
+        className={` ${styles.padding} min-h-screen md:container ${
+          !isHome && 'md:pt-0'
+        }`}
+      >
         {!isHome && <BreadCrumbs />}
         <Outlet />
       </main>

@@ -23,7 +23,7 @@ const SwiperSmall = ({ next, prev, imageList }) => {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative 2xl:w-[75vw] 2xl:self-center'>
       <Swiper
         modules={[Navigation, Pagination]}
         speed={200}
@@ -33,7 +33,7 @@ const SwiperSmall = ({ next, prev, imageList }) => {
           prevEl: `.${prev}`,
           clickable: true,
         }}
-        className='swiper_container max-w-6xl rounded-lg shadow-lg shadow-black/50 2xl:max-w-full'
+        className='swiper_container rounded-lg shadow-lg shadow-black/50'
       >
         {(imageList ?? hero).map((swiper, i) => (
           <SwiperSlide key={i}>
@@ -58,7 +58,7 @@ const SwiperSmall = ({ next, prev, imageList }) => {
       <SliderController
         next={next}
         prev={prev}
-        className='bottom-6 right-0 w-20 xl:-right-12 xl:-top-60 2xl:-right-24'
+        className='bottom-6 right-0 md:-right-20 md:bottom-full md:top-8 2xl:-right-32 2xl:w-28'
       />
     </div>
   )

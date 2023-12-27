@@ -26,7 +26,7 @@ const BreadCrumbs = () => {
     ))
 
   return (
-    <div className='flex w-full items-center justify-start py-10'>
+    <div className='flex w-full items-center justify-start py-12'>
       <Link to='/' className='hover:font-medium'>
         Home
       </Link>

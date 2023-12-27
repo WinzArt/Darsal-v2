@@ -6,10 +6,7 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
 
-import { Icon } from '@iconify/react'
-
 import { jumbotron } from '../../utils'
-import { styles } from '../../styles'
 import { PageBreak, SliderController } from '../molecules'
 
 const Jumbotron = ({ next, prev, isJumbotron }) => {
@@ -21,7 +18,6 @@ const Jumbotron = ({ next, prev, isJumbotron }) => {
         modules={[EffectFade, Autoplay, Navigation]}
         effect={'fade'}
         grabCursor={false}
-        // centeredSlides={true}
         loop={true}
         slidesPerView={'auto'}
         allowTouchMove={true}
@@ -53,9 +49,7 @@ const Jumbotron = ({ next, prev, isJumbotron }) => {
             <PageBreak
               quote={swiper.qoute}
               text={swiper.text}
-              className={`${
-                styles.padding
-              } absolute bottom-0 w-full text-white transition-all delay-700 duration-700 ease-in xl:container md:justify-start ${
+              className={`transition-all delay-700 duration-700 ease-in ${
                 i === activeIndex
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-full opacity-0'

@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`${styles.paddingX} fixed z-20 flex aspect-square h-20 w-full items-center justify-center bg-slate-500/25 text-white shadow-md backdrop-blur-sm md:h-28`}
+      className={`${styles.padding} fixed z-20 flex aspect-square h-20 w-full items-center justify-center bg-slate-500/25 text-white shadow-md backdrop-blur-sm md:h-28`}
     >
       <nav className='flex w-full items-center justify-between'>
         <div className='z-10'>
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div
           className={`absolute left-0 top-0 flex w-full ${
             isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-          } flex-col gap-8 bg-slate-500 p-8 pt-24 duration-500 sm:h-screen md:static md:h-auto md:-translate-x-0 md:translate-y-0 md:items-end md:gap-2 md:bg-inherit md:p-0 md:opacity-100`}
+          } h-screen flex-col gap-8 bg-slate-500 p-8 pt-24 duration-500 md:static md:h-auto md:-translate-x-0 md:translate-y-0 md:items-end md:gap-2 md:bg-inherit md:p-0 md:opacity-100`}
         >
           <ul className='flex items-center justify-center gap-5 md:justify-end'>
             {headerNav.slice(0, 3).map((nav) => (

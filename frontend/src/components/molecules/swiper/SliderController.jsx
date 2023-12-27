@@ -10,14 +10,16 @@ const SliderController = ({
 }) => {
   return (
     <div
-      className={`${className} slider-controler ${isSwiperBig ?? 'absolute'} `}
+      className={`${className} slider-controler ${
+        isSwiperBig ?? 'absolute w-20 2xl:w-28'
+      } `}
     >
       <div
         className={`${next} swiper-button-next border-t-2 ${
           isSwiperBig
             ? 'mr-2 border-2 border-black text-black sm:mr-6'
             : isJumbotron
-              ? ' border-white text-white'
+              ? 'border-white text-white'
               : 'border-cyan-500 text-cyan-500 md:border-black md:text-black'
         } `}
       >
@@ -28,10 +30,12 @@ const SliderController = ({
         />
       </div>
       <div
-        className={`${prev} swiper-button-prev ${
+        className={`${prev} swiper-button-prev border-b-2  ${
           isSwiperBig
             ? 'ml-2 border-2 border-black text-black sm:ml-6'
-            : 'mt-8 border-b-2'
+            : isJumbotron
+              ? 'mt-8 border-white text-white 2xl:mt-12'
+              : 'mt-8 2xl:mt-12'
         } ${
           isJumbotron ? 'text-white md:text-white' : 'border-black text-black'
         }`}

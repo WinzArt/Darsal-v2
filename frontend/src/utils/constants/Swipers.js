@@ -1,14 +1,3 @@
-// import {
-//   logoDarsal,
-//   img1,
-//   img2,
-//   img3,
-//   img4,
-//   img5,
-//   img6,
-//   aboutHero,
-// } from '../../assets'
-
 import { images, logo } from '../../assets'
 
 export const jumbotron = [
@@ -120,5 +109,28 @@ export const aboutSwiper = [
     image: images.img1,
     title: '-',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deserunt laborum omnis optio. Dolorem numquam, autem facilis unde dicta nisi!',
+  },
+]
+
+export const kejuruan = [
+  {
+    image: images.labKomp,
+    title: 'Teknik Jaringan Komputer dan Telekomunikas (TJKT)',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.labKomp,
+    title: 'Pemasaran',
+    text: 'Bidang ini mempelajari dasar-dasar kemampuan dan pengetahuan untuk menjadi seorang marketing, baik secara konvensional maupun online.',
+  },
+  {
+    image: images.hallBadminton,
+    title: 'Manajemen Perkantoran dan Layanan Bisnis (MPLB)',
+    text: 'Jurusan ini mengajarkan administrasi, surat-menyurat, dan pengarsipan. Lulusan siap bekerja sebagai tenaga administrasi atau sekretaris.',
+  },
+  {
+    image: images.lapanganFustsal,
+    title: 'Akuntansi Keuangan Lembaga (AKL)',
+    text: 'Jurusan ini memfokuskan pada pencatatan, penggolongan, dan penyusunan laporan, baik secara manual maupun dengan komputerisasi.',
   },
 ]

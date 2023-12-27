@@ -4,7 +4,7 @@ import { PageBreak, SwiperBig, SwiperSmall } from '../components'
 
 const Home = () => {
   return (
-    <div className=' flex flex-col gap-20'>
+    <div className='flex flex-col gap-20'>
       <div className='mx-auto flex max-w-md flex-col items-center gap-4 md:max-w-lg'>
         <img
           src={logoDarsal}
@@ -30,7 +30,7 @@ const Home = () => {
         text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
         className='md:justify-end'
       />
-      <div className='relative mb-10 drop-shadow-md sm:mb-0'>
+      <div className='relative mb-10 drop-shadow-md sm:mb-0 2xl:self-center'>
         <div
           style={{
             backgroundImage: `url(${batik})`,
@@ -44,7 +44,7 @@ const Home = () => {
         text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
         className='md:justify-end'
       />
-      <div className='relative mb-10 drop-shadow-md sm:mb-0'>
+      <div className='relative mb-10 drop-shadow-md sm:mb-0 2xl:self-center'>
         <div
           style={{
             backgroundImage: `url(${batik})`,

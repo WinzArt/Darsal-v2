@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,13 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  @apply bg-slate-300 text-gray-700;
+  @apply bg-slate-50 text-gray-900;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Public Sans', sans-serif;
 }
 
 @layer components {
@@ -45,7 +51,7 @@ body {
 }
 
 .slider-controler div {
-  @apply h-10 w-10 rounded-md  p-1 shadow shadow-black/40 backdrop-blur-sm after:hidden;
+  @apply h-10 w-10 rounded-md p-1 shadow shadow-black/40 backdrop-blur-sm after:hidden 2xl:h-14 2xl:w-14;
 }
 
 .icon-prev {
