@@ -18,12 +18,12 @@ const PageBreak = ({ quote, text, className, link, isJumbotron }) => {
           }`}
         />
         <div className='flex w-full cursor-default flex-col gap-4 xl:flex-row 2xl:h-36'>
-          <h1
-            className='text-2xl font-bold leading-none md:w-1/3 md:text-4xl'
+          <h3
+            className='font-bold leading-none md:w-1/3 md:text-4xl'
             // dangerouslySetInnerHTML={{ __html: quote }}
           >
             {quote}
-          </h1>
+          </h3>
           <p className='text-sm leading-relaxed md:w-1/2'>{text}</p>
           {link && (
             <div className='group flex h-fit w-fit items-center hover:font-medium md:justify-end xl:w-1/4'>

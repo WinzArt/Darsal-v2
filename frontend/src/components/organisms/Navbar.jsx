@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`${styles.padding} fixed z-20 flex aspect-square h-20 w-full items-center justify-center bg-slate-500/25 text-white shadow-md backdrop-blur-sm md:h-28`}
+      className={`${styles.padding} fixed z-20 flex aspect-square h-20 w-screen items-center justify-center bg-slate-500/25 text-white shadow-md backdrop-blur-sm md:h-28`}
     >
       <nav className='flex w-full items-center justify-between'>
         <div className='z-10'>
@@ -46,7 +46,7 @@ const Navbar = () => {
               alt='Logo'
               className='w-10 rounded-full bg-white ring-4 ring-white md:w-16'
             />
-            <h1 className='font-bold leading-tight md:text-2xl'>
+            <h1 className='text-lg font-bold leading-tight md:text-2xl'>
               SMK <br /> DARUSSALAM
             </h1>
           </Link>

@@ -12,7 +12,7 @@ const BreadCrumbs = () => {
       <div
         key={crumb}
         className={`flex items-center ${
-          index === crumbsArray.length - 1 ? 'text-teal-500' : ''
+          index === crumbsArray.length - 1 ? 'text-emerald-700' : ''
         }`}
       >
         <Icon icon='mdi:chevron-right' width='24' className='text-slate-500' />

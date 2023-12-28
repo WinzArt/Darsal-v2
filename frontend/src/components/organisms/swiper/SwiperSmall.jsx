@@ -45,7 +45,7 @@ const SwiperSmall = ({ next, prev, imageList }) => {
             ></div>
             <div className='group absolute inset-0 flex aspect-2/3 w-full cursor-default items-center px-4 text-white duration-1000 hover:backdrop-blur-sm'>
               <div className='relative inset-y-1/2 h-1/2 transition-all duration-300 ease-in-out group-hover:inset-y-0'>
-                <h1 className='text-xl font-semibold'>{swiper.title}</h1>
+                <h4 className='font-semibold'>{swiper.title}</h4>
                 <div className='opacity-0 duration-500 group-hover:opacity-100'>
                   <hr className='my-4' />
                   <p className='tracking-tighter'>{swiper.text}</p>

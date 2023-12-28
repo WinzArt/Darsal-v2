@@ -96,6 +96,11 @@ export const aboutSwiper = [
     text: 'Lab computer digunakan siswa sebagai penunjang praktek administrasi maupun perakitan.',
   },
   {
+    image: images.perpus,
+    title: 'Gedung Perpustakaan',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deserunt laborum omnis optio. Dolorem numquam, autem facilis unde dicta nisi!',
+  },
+  {
     image: images.hallBadminton,
     title: 'Hall Badminton',
     text: 'Hall badminton adalah salah satu fasilitas yang diberikan kepada siswa untuk mengembangkan minat dan bakat siswa itu sendiri.',
@@ -105,32 +110,70 @@ export const aboutSwiper = [
     title: 'Lapangan Futsal',
     text: 'Lapangan futsal adalah lapangan olahraga yang dirancang khusus untuk permainan futsal, versi mini atau dalam ruangan dari sepak bola.',
   },
-  {
-    image: images.img1,
-    title: '-',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deserunt laborum omnis optio. Dolorem numquam, autem facilis unde dicta nisi!',
-  },
 ]
 
 export const kejuruan = [
   {
-    image: images.labKomp,
+    image: images.tjkt1,
     title: 'Teknik Jaringan Komputer dan Telekomunikas (TJKT)',
     text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
   },
   {
-    image: images.labKomp,
+    image: images.pemasaran2,
     title: 'Pemasaran',
     text: 'Bidang ini mempelajari dasar-dasar kemampuan dan pengetahuan untuk menjadi seorang marketing, baik secara konvensional maupun online.',
   },
   {
-    image: images.hallBadminton,
+    image: images.mplb2,
     title: 'Manajemen Perkantoran dan Layanan Bisnis (MPLB)',
     text: 'Jurusan ini mengajarkan administrasi, surat-menyurat, dan pengarsipan. Lulusan siap bekerja sebagai tenaga administrasi atau sekretaris.',
   },
   {
-    image: images.lapanganFustsal,
+    image: images.akl1,
     title: 'Akuntansi Keuangan Lembaga (AKL)',
     text: 'Jurusan ini memfokuskan pada pencatatan, penggolongan, dan penyusunan laporan, baik secara manual maupun dengan komputerisasi.',
+  },
+]
+
+export const ekskul = [
+  {
+    image: images.paskibra,
+    title: 'Paskibra',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.paduanSuara,
+    title: 'Paduan Suara',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.hadrohBaitussalam,
+    title: 'Hadroh Baitussalam',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.buluTangkis,
+    title: 'Bulu Tangkis',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.silat,
+    title: 'Silat',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.futsal,
+    title: 'Futsal',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.sispala,
+    title: 'Sispala',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
+  },
+  {
+    image: images.dayung,
+    title: 'Dayung',
+    text: 'Pada jurusan ini siswa dapat belajar mengenai seluk beluk komputer, jaringan komputer dan implementasinya.',
   },
 ]

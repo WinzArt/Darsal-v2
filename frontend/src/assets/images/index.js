@@ -1,4 +1,6 @@
 export * from './about'
+export * from './akademik'
+export * from './ekskul'
 
 import img1 from './img-1.jpg'
 import img2 from './img-2.jpg'

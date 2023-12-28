@@ -18,6 +18,9 @@ export default {
         '4/3': '4 / 3',
         '3/4': '3 / 4',
       },
+      fontSize: {
+        xxs: '0.5rem',
+      },
     },
   },
   plugins: [],

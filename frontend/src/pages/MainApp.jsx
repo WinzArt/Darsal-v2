@@ -29,8 +29,8 @@ const MainApp = () => {
         />
       )}
       <main
-        className={` ${styles.padding} min-h-screen md:container ${
-          !isHome && 'md:pt-0'
+        className={` ${styles.padding} mb-12 min-h-screen md:container ${
+          !isHome && 'sm:pt-0'
         }`}
       >
         {!isHome && <BreadCrumbs />}

@@ -1,10 +1,14 @@
 import React from 'react'
 
-const ImgFrame = ({ image, caption, className }) => {
+const ImgFrame = ({ image, caption, className, isPNG, imgClass }) => {
   return (
-    <figure className={`flex w-full flex-col items-center ${className}`}>
+    <figure
+      className={`flex w-full flex-col items-center rounded-lg ${className}`}
+    >
       <img
-        className={`aspect-video w-full rounded-lg bg-slate-400 object-contain object-center p-4 md:max-w-4xl`}
+        className={` ${
+          isPNG ? 'object-contain p-8' : 'object-cover'
+        } aspect-video w-full rounded-lg md:max-w-4xl ${imgClass}`}
         src={image}
         alt='image description'
       />

@@ -20,7 +20,7 @@ const SliderController = ({
             ? 'mr-2 border-2 border-black text-black sm:mr-6'
             : isJumbotron
               ? 'border-white text-white'
-              : 'border-cyan-500 text-cyan-500 md:border-black md:text-black'
+              : 'border-emerald-400 text-emerald-400 md:border-black md:text-black'
         } `}
       >
         <Icon

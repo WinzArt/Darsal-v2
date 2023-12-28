@@ -10,11 +10,11 @@ import 'swiper/css/pagination'
 import { hero } from '../../../utils'
 import { SliderController } from '../../molecules'
 
-const SwiperBig = ({ next, prev, isSwiperBig }) => {
+const SwiperBig = ({ next, prev, imageList, isSwiperBig }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div className='relative mb-8'>
+    <div className='relative w-screen self-center bg-gradient-to-t from-emerald-500 py-8 drop-shadow-xl'>
       <Swiper
         modules={[Navigation, Pagination, EffectCoverflow]}
         effect={'coverflow'}
@@ -49,23 +49,27 @@ const SwiperBig = ({ next, prev, isSwiperBig }) => {
           const { realIndex } = swiperCore
           setActiveIndex(realIndex)
         }}
-        className='swiper_container bg-gradient-to-t from-teal-200 to-transparent'
+        className='swiper_container overflow-visible'
       >
-        {hero.map((swiper, i) => (
+        {(imageList ?? hero).map((swiper, i) => (
           <SwiperSlide key={i} className=''>
             <div
               style={{
                 backgroundImage: `url(${swiper.image})`,
               }}
-              className={`my-10 flex aspect-square rounded-xl bg-cover bg-center shadow-xl shadow-black/50 brightness-75 sm:aspect-video ${
+              className={`mb-16 flex aspect-square rounded-xl bg-cover bg-center shadow-xl shadow-black/50 brightness-75 sm:aspect-video ${
                 i === activeIndex ? '' : 'blur-sm'
               }`}
             ></div>
-            <div className='absolute inset-0 flex w-full cursor-default items-center text-center text-white duration-1000'>
-              <div className='absolute bottom-12 right-2 flex max-w-sm flex-col rounded-xl bg-teal-500/50 p-2 backdrop-blur-sm sm:max-w-xs'>
-                <h1 className='text-xl md:text-2xl'>{swiper.title}</h1>
-                <p className='text-xs md:text-base'>{swiper.text}</p>
-              </div>
+            <div
+              className={`${
+                i === activeIndex
+                  ? 'bottom-4 opacity-100'
+                  : '-bottom-full opacity-0'
+              } absolute w-full flex-col items-center justify-center rounded-xl p-2 text-white transition-all delay-150 duration-500 ease-in`}
+            >
+              <h4 className='md:text-2xl'>{swiper.title}</h4>
+              <p className='text-xs md:text-base'>{swiper.text}</p>
             </div>
           </SwiperSlide>
         ))}

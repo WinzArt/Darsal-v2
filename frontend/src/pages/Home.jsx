@@ -1,11 +1,12 @@
 import React from 'react'
 import { batik, logoDarsal } from '../assets'
 import { PageBreak, SwiperBig, SwiperSmall } from '../components'
+import { aboutSwiper, ekskul, kejuruan } from '../utils'
 
 const Home = () => {
   return (
     <div className='flex flex-col gap-20'>
-      <div className='mx-auto flex max-w-md flex-col items-center gap-4 md:max-w-lg'>
+      <div className='md:ptt-0 mx-auto flex max-w-lg flex-col items-center justify-center gap-4 pt-12 md:max-w-xl'>
         <img
           src={logoDarsal}
           alt='logo'
@@ -22,8 +23,29 @@ const Home = () => {
         className='md:justify-start'
       />
       <SwiperSmall next='home-next1' prev='home-prev1' />
-      <div className='w-screen self-center'>
-        <SwiperBig next='home-next2' prev='home-prev2' isSwiperBig={true} />
+      <SwiperBig
+        imageList={kejuruan}
+        next='home-next2'
+        prev='home-prev2'
+        isSwiperBig={true}
+      />
+      <PageBreak
+        quote='Mengenal SMK Darusaalam'
+        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
+        className='md:justify-end'
+      />
+      <div className='relative mb-10 drop-shadow-md sm:mb-0 2xl:self-center'>
+        <div
+          style={{
+            backgroundImage: `url(${batik})`,
+          }}
+          className='absolute -left-10 -top-14 h-full w-screen rounded-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:-left-14'
+        ></div>
+        <SwiperSmall
+          imageList={aboutSwiper}
+          next='home-next3'
+          prev='home-prev3'
+        />
       </div>
       <PageBreak
         quote='Mengenal SMK Darusaalam'
@@ -35,23 +57,9 @@ const Home = () => {
           style={{
             backgroundImage: `url(${batik})`,
           }}
-          className='absolute -left-10 -top-14 h-full w-screen rounded-l-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:left-5'
+          className='absolute -bottom-14 -right-10 h-1/3 w-screen rounded-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:-right-14'
         ></div>
-        <SwiperSmall next='home-next3' prev='home-prev3' />
-      </div>
-      <PageBreak
-        quote='Mengenal SMK Darusaalam'
-        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
-        className='md:justify-end'
-      />
-      <div className='relative mb-10 drop-shadow-md sm:mb-0 2xl:self-center'>
-        <div
-          style={{
-            backgroundImage: `url(${batik})`,
-          }}
-          className='absolute -bottom-14 -right-10 h-1/3 w-screen rounded-r-lg bg-emerald-500 bg-[length:15rem] bg-right bg-repeat md:right-5'
-        ></div>
-        <SwiperSmall next='home-next4' prev='home-prev4' />
+        <SwiperSmall imageList={ekskul} next='home-next4' prev='home-prev4' />
       </div>
     </div>
   )

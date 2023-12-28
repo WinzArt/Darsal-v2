@@ -7,13 +7,13 @@ const About = () => {
   return (
     <div className='flex flex-col gap-20'>
       <div className='flex flex-col gap-4 md:block'>
-        <h1 className='my-8 text-6xl font-extrabold text-emerald-700'>
-          Profil
-        </h1>
+        <h1 className='my-8 font-extrabold text-emerald-700'>Profil</h1>
         <ImgFrame
           image={logoDarsal}
           caption='Image Caption'
           className='order-last float-right md:order-none md:ml-8 md:max-w-xl'
+          imgClass='bg-slate-400'
+          isPNG={true}
         />
         <p className='clear-left text-justify indent-16 text-lg font-medium leading-relaxed tracking-tight'>
           Sekolah Menengah Kejuruan (SMK) Darussalam didirikan pada tahun 2009
@@ -34,19 +34,24 @@ const About = () => {
         </p>
       </div>
       <div className='relative'>
-        <div
+        {/* <div
           style={{ backgroundImage: `url(${logoDarsal})` }}
           className={`mx-auto aspect-video w-full max-w-4xl bg-[length:20rem] bg-center bg-no-repeat opacity-30 brightness-150 md:bg-[length:25rem]`}
-        ></div>
+        ></div> */}
+        <ImgFrame
+          image={logoDarsal}
+          className='mx-auto aspect-video w-full max-w-4xl bg-transparent opacity-30 brightness-150'
+          isPNG={true}
+        />
         <div className='absolute inset-0 mx-auto flex max-w-xl flex-col items-center justify-center gap-2 md:max-w-3xl'>
-          <h2 className='text-xl font-semibold md:text-2xl'>VISI :</h2>
+          <h4 className='font-semibold md:text-2xl'>VISI :</h4>
           <p className='text-center font-medium leading-relaxed md:text-xl'>
             “SMK Darussalam sebagai pusat pengembangan sumber daya manusia yang
             handal, profesional dan menghasilkan lulusan tenaga kerja terampil,
             profesional serta berakhlak mulia”
           </p>
-          <hr className='h-2 w-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent' />
-          <h2 className='text-xl font-semibold md:text-2xl'>MISI :</h2>
+          <hr className='h-3 w-full border-b-4 border-t-4 border-white bg-gradient-to-r from-transparent via-emerald-600 to-transparent' />
+          <h4 className='font-semibold md:text-2xl'>MISI :</h4>
           <p className='text-center font-medium leading-relaxed md:text-xl'>
             “Melaksanakan pendidikan latihan kerja dengan pengembangan IPTEK dan
             imtaq, serta bersinergi dengan instansi pasangan sebagai wahana
@@ -71,10 +76,15 @@ const About = () => {
         incidunt omnis dolores!
       </p>
       <div className='flex flex-col items-center gap-4'>
-        <h1 className='mb-6 text-center text-2xl font-bold'>
+        <h2 className='mb-6 text-center font-bold'>
           Struktur Organisasi <br /> SMK Darussalam
-        </h1>
-        <ImgFrame image={logoDarsal} caption='Image Caption' className='' />
+        </h2>
+        <ImgFrame
+          image={logoDarsal}
+          caption='Image Caption'
+          imgClass='bg-slate-400'
+          isPNG={true}
+        />
       </div>
     </div>
   )
