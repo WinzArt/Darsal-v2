@@ -1,30 +1,27 @@
 import React from 'react'
-import { Button, PostCard, Search, Title } from '../../components'
+import { Button, AdminPostCard, Search, AdminTitle } from '../../components'
 
 const Posts = () => {
   return (
-    <div className='space-y-4'>
-      <Title title='Kelola Berita' />
-      <div className='rounded-lg border-2 border-dashed border-gray-500 p-4'>
-        <div className='flex items-center justify-between pb-4'>
+    <div className='space-y-4 drop-shadow-sm'>
+      <AdminTitle title='Kelola Berita' />
+      <div className='space-y-4 rounded-2xl border-2 border-dashed border-gray-500 p-4'>
+        <div className='flex h-8 items-center justify-between'>
           <Search placeholder='Cari judul berita...' />
           <Button
             title='Add News'
             icon='mdi:newspaper-plus'
-            width='24'
-            className='flex-row-reverse bg-gray-50'
+            className='flex-row-reverse bg-blue-400'
           />
         </div>
-        <div className='grid grid-cols-3 gap-4'>
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+        <div className='flex flex-col gap-4'>
+          <AdminPostCard />
+          <AdminPostCard />
+          <AdminPostCard />
+          <AdminPostCard />
         </div>
+        <div>Paginations</div>
       </div>
-      <div>Paginations</div>
     </div>
   )
 }

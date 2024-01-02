@@ -18,6 +18,7 @@ const Footer = () => {
     <div
       className={`${styles.padding} relative flex flex-col justify-between overflow-hidden bg-slate-400 !pb-4`}
     >
+      <hr className='absolute inset-0 z-10 h-1.5 bg-gradient-to-b from-black/50' />
       <div className='z-10'>
         <div className='mb-6 flex h-16 w-full items-center justify-between'>
           <Link
@@ -80,7 +81,7 @@ const Footer = () => {
         </div>
         <hr className='border-black pb-4' />
         <div className='mx-auto flex max-w-sm items-center justify-between md:max-w-2xl'>
-          <Link to='/' className='text-xxs bg-slate-200 p-1 drop-shadow-sm'>
+          <Link to='/' className='bg-slate-200 p-1 text-xxs drop-shadow-sm'>
             Powered by <span className='font-semibold'>winzArt</span>
           </Link>
           <div className='flex h-6 gap-4'>
@@ -91,7 +92,7 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className='absolute inset-0 -left-12 -top-12 origin-top-right -rotate-45 bg-inherit bg-[length:30rem] bg-[center_top_0] shadow-inner shadow-black/80 brightness-95 '
+        className='absolute inset-0 -left-12 -top-12 origin-top-right -rotate-45 bg-inherit bg-[length:30rem] bg-[center_top_0] shadow-inner shadow-black/80 brightness-95'
         style={{
           backgroundImage: `url(${atk})`,
         }}

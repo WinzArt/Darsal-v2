@@ -18,12 +18,26 @@ import {
   Organization,
   Achievment,
   News,
+  Post,
+  Login,
 } from '../../pages'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 const MyRoute = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
+        <Route path='login' element={<Login />} />
         <Route path='/' element={<MainApp />}>
           <Route index element={<Home />} />
           <Route path='admin' element={<MainAdmin />}>
@@ -36,7 +50,10 @@ const MyRoute = () => {
           <Route path='pendaftaran' element={<Admission />} />
           <Route path='organisasi' element={<Organization />} />
           <Route path='prestasi' element={<Achievment />} />
-          <Route path='berita' element={<News />} />
+          <Route path='berita'>
+            <Route index element={<News />} />
+            <Route path='post' element={<Post />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

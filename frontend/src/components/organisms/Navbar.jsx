@@ -6,9 +6,30 @@ import { headerNav } from '../../utils'
 import { styles } from '../../styles'
 import { logoDarsal } from '../../assets'
 
-const Navbar = () => {
+const Navbar = ({ isBlog }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [buttonKey, setButtonKey] = useState(0)
+  const [color, setColor] = useState(false)
+  const [visible, setVisible] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY)
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY
+    setVisible(prevScrollPos <= window.scrollY && window.scrollY >= 80)
+    setPrevScrollPos(currentScrollPos)
+    changeColor()
+  }
+
+  const changeColor = () => {
+    setColor(window.scrollY >= 80)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [prevScrollPos, visible])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -29,7 +50,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`${styles.padding} fixed z-20 flex aspect-square h-20 w-screen items-center justify-center bg-slate-500/25 text-white shadow-md backdrop-blur-sm md:h-28`}
+      className={`${
+        styles.padding
+      } fixed z-20 flex h-20 w-screen items-center justify-center text-white shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:h-36 ${
+        (color && 'bg-emerald-700') || (isBlog && 'bg-emerald-700')
+      } ${visible && '-translate-y-full'}`}
     >
       <nav className='flex w-full items-center justify-between'>
         <div className='z-10'>
@@ -46,9 +71,9 @@ const Navbar = () => {
               alt='Logo'
               className='w-10 rounded-full bg-white ring-4 ring-white md:w-16'
             />
-            <h1 className='text-lg font-bold leading-tight md:text-2xl'>
+            <h5 className='font-bold leading-tight md:text-2xl'>
               SMK <br /> DARUSSALAM
-            </h1>
+            </h5>
           </Link>
         </div>
         <div
@@ -65,7 +90,7 @@ const Navbar = () => {
                   className='navlink group'
                 >
                   <div className='flex w-fit items-center group-hover:after:w-full'>
-                    <Icon icon={nav.icon} width='24' />
+                    <Icon icon={nav.icon} />
                     {nav.title}
                   </div>
                 </NavLink>

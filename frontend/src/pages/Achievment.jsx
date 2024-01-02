@@ -8,12 +8,18 @@ const Achievment = () => {
     <div className='flex flex-col gap-20'>
       <div className='flex flex-col gap-4 md:block'>
         <h1 className='my-8 font-extrabold text-emerald-700'>Prestasi</h1>
-        <h2 className='max-w-4xl font-medium leading-normal text-emerald-700'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          nemo assumenda mollitia placeat nihil amet molestiae aut quo nostrum,
-          delectus repellat. Lorem ipsum dolor sit amet.
+        <ImgFrame
+          image={logoDarsal}
+          caption='Image Caption'
+          className='float-left md:order-none md:mr-8 md:max-w-xl'
+          imgClass='bg-slate-400'
+          isPNG={true}
+        />
+        <h2 className='clear-right font-medium leading-normal text-emerald-700'>
+          Lorem ipsum dolor sit amet consectetur adipisicing doloremque nemo
+          assumenda ?
         </h2>
-        <p className='text-lg font-medium leading-relaxed tracking-tight'>
+        <p className='clear-right text-justify text-lg font-medium leading-relaxed tracking-tight'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Exercitationem aliquam sit saepe sunt ut eum consequatur, ea
           voluptatum accusamus expedita.
@@ -30,7 +36,17 @@ const Achievment = () => {
         prev='achievment-prev1'
         isSwiperBig={true}
       />
-      <Gallery imageList={kejuruan} />
+      <div className='space-y-4'>
+        <h2 className='font-bold leading-none text-emerald-700'>Prestasi</h2>
+        <p>
+          3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+          inventore atque amet maiores temporibus labore cum porro, libero, ab
+          commodi facilis consequatur vero, dicta dolorem consequuntur quas
+          voluptatem necessitatibus saepe neque quod alias maxime! Dicta
+          aspernatur ducimus deleniti praesentium cupiditate.
+        </p>
+        <Gallery imageList={kejuruan} grid={true} />
+      </div>
       <Divider />
     </div>
   )

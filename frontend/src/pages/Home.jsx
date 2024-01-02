@@ -1,7 +1,7 @@
 import React from 'react'
 import { batik, logoDarsal } from '../assets'
 import { PageBreak, SwiperBig, SwiperSmall } from '../components'
-import { aboutSwiper, ekskul, kejuruan } from '../utils'
+import { aboutSwiper, ekskul, hero, kejuruan } from '../utils'
 
 const Home = () => {
   return (
@@ -12,17 +12,17 @@ const Home = () => {
           alt='logo'
           className='w-60 rounded-full p-2 shadow-inner shadow-black/75 ring-black drop-shadow-lg'
         />
-        <p className='text-center font-serif text-xl leading-relaxed md:text-2xl '>
+        <h4 className='text-center font-serif leading-relaxed md:text-2xl '>
           "Membangun Intelektual Siswa-Siswi Yang Berakhlak, Disiplin, Kreatif,
           dan Bertanggung Jawab Berlandaskan Iman dan Taqwa"
-        </p>
+        </h4>
       </div>
       <PageBreak
         quote='Mengenal SMK Darusaalam'
         text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
         className='md:justify-start'
       />
-      <SwiperSmall next='home-next1' prev='home-prev1' />
+      <SwiperSmall imageList={hero} next='home-next1' prev='home-prev1' />
       <SwiperBig
         imageList={kejuruan}
         next='home-next2'
@@ -32,7 +32,7 @@ const Home = () => {
       <PageBreak
         quote='Mengenal SMK Darusaalam'
         text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt fuga? Officiis iusto est exercitationem?'
-        className='md:justify-end'
+        className='md:justify-center'
       />
       <div className='relative mb-10 drop-shadow-md sm:mb-0 2xl:self-center'>
         <div

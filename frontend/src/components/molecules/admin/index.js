@@ -1,5 +1,5 @@
 import AdminNav from './AdminNav'
-import Title from './Title'
-import PostCard from './PostCard'
+import AdminTitle from './AdminTitle'
+import AdminPostCard from './AdminPostCard'
 
-export { AdminNav, Title, PostCard }
+export { AdminNav, AdminTitle, AdminPostCard }

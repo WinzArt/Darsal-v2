@@ -15,15 +15,18 @@ const SwiperSmall = ({ next, prev, imageList }) => {
       slidesPerView: 2.1,
     },
     640: {
-      slidesPerView: 3,
+      slidesPerView: 3.3,
     },
     1280: {
+      slidesPerView: 4,
+    },
+    1536: {
       slidesPerView: 5,
     },
   }
 
   return (
-    <div className='relative 2xl:w-[75vw] 2xl:self-center'>
+    <div className='relative drop-shadow-lg 2xl:w-[75vw] 2xl:self-center'>
       <Swiper
         modules={[Navigation, Pagination]}
         speed={200}
@@ -35,7 +38,7 @@ const SwiperSmall = ({ next, prev, imageList }) => {
         }}
         className='swiper_container rounded-lg shadow-lg shadow-black/50'
       >
-        {(imageList ?? hero).map((swiper, i) => (
+        {imageList.map((swiper, i) => (
           <SwiperSlide key={i}>
             <div
               style={{

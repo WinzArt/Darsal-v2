@@ -54,32 +54,32 @@ export const hero = [
   },
   {
     path: '/akademik',
-    image: images.img2,
+    image: images.labKomp,
     title: 'Akademik',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at nam commodi odio expedita maiores!',
   },
   {
     path: '/pendaftaran',
-    image: images.img3,
+    image: images.tjkt1,
     title: 'Pendaftaran',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at nam commodi odio expedita maiores!',
   },
   {
     path: '/organisasi',
-    image: images.img4,
+    image: images.silat,
     title: 'Organisasi',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at nam commodi odio expedita maiores!',
   },
   {
     path: '/prestasi',
-    image: images.img5,
+    image: images.paskibra,
     title: 'Prestasi',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at nam commodi odio expedita maiores!',
   },
   {
     path: '/berita',
-    image: images.img6,
-    title: 'Berita',
+    image: images.perpus,
+    title: 'Darsal Blog',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at nam commodi odio expedita maiores!',
   },
 ]

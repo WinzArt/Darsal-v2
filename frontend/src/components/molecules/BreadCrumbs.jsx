@@ -15,7 +15,11 @@ const BreadCrumbs = () => {
           index === crumbsArray.length - 1 ? 'text-emerald-700' : ''
         }`}
       >
-        <Icon icon='mdi:chevron-right' width='24' className='text-slate-500' />
+        <Icon
+          icon='mdi:chevron-right'
+          width='1.5em'
+          className='text-slate-500'
+        />
         <Link
           to={`/${crumbsArray.slice(0, index + 1).join('/')}`}
           className={`capitalize hover:font-medium`}
@@ -26,7 +30,7 @@ const BreadCrumbs = () => {
     ))
 
   return (
-    <div className='flex w-full items-center justify-start py-12'>
+    <div className='flex w-full items-center justify-start py-10 text-sm md:pt-0'>
       <Link to='/' className='hover:font-medium'>
         Home
       </Link>

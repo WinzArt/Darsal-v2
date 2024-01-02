@@ -11,15 +11,17 @@ const About = () => {
         <ImgFrame
           image={logoDarsal}
           caption='Image Caption'
-          className='order-last float-right md:order-none md:ml-8 md:max-w-xl'
+          className='order-last float-left md:order-none md:mr-8 md:max-w-xl'
           imgClass='bg-slate-400'
           isPNG={true}
         />
-        <p className='clear-left text-justify indent-16 text-lg font-medium leading-relaxed tracking-tight'>
-          Sekolah Menengah Kejuruan (SMK) Darussalam didirikan pada tahun 2009
-          dengan SK Pendirian Nomor 800/1666-Dispen 2009 di Kota Tangerang
-          Selatan Provinsi Banten atas Prakarsa Ketua Yayasan Pendidikan Islam
-          Modern Darussalam{' '}
+        <p className='clear-right text-justify text-lg font-medium leading-relaxed tracking-tight'>
+          <span className='font-serif font-semibold'>
+            Sekolah Menengah Kejuruan (SMK) Darussalam
+          </span>{' '}
+          didirikan pada tahun 2009 dengan SK Pendirian Nomor 800/1666-Dispen
+          2009 di Kota Tangerang Selatan Provinsi Banten atas Prakarsa Ketua
+          Yayasan Pendidikan Islam Modern Darussalam{' '}
           <span className='whitespace-nowrap font-serif font-semibold'>
             Bapak H. Salman Faris, S.E.
           </span>
@@ -50,7 +52,7 @@ const About = () => {
             handal, profesional dan menghasilkan lulusan tenaga kerja terampil,
             profesional serta berakhlak mulia”
           </p>
-          <hr className='h-3 w-full border-b-4 border-t-4 border-white bg-gradient-to-r from-transparent via-emerald-600 to-transparent' />
+          <hr className='h-3 w-full border-b-4 border-t-4 border-slate-200 bg-gradient-to-r from-transparent via-emerald-600 to-transparent' />
           <h4 className='font-semibold md:text-2xl'>MISI :</h4>
           <p className='text-center font-medium leading-relaxed md:text-xl'>
             “Melaksanakan pendidikan latihan kerja dengan pengembangan IPTEK dan
@@ -76,12 +78,13 @@ const About = () => {
         incidunt omnis dolores!
       </p>
       <div className='flex flex-col items-center gap-4'>
-        <h2 className='mb-6 text-center font-bold'>
+        <h2 className='mb-6 text-center font-bold text-emerald-700'>
           Struktur Organisasi <br /> SMK Darussalam
         </h2>
         <ImgFrame
           image={logoDarsal}
           caption='Image Caption'
+          className=''
           imgClass='bg-slate-400'
           isPNG={true}
         />

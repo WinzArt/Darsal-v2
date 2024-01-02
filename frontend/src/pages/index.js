@@ -1,4 +1,5 @@
 export * from './admin'
+export * from './post'
 
 import MainApp from './MainApp'
 import Home from './Home'

@@ -7,26 +7,31 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import { hero } from '../../../utils'
 import { SliderController } from '../../molecules'
 
 const SwiperBig = ({ next, prev, imageList, isSwiperBig }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div className='relative w-screen self-center bg-gradient-to-t from-emerald-500 py-8 drop-shadow-xl'>
+    <div className='relative w-screen self-center bg-gradient-to-t from-emerald-500 py-4 drop-shadow-lg'>
+      {/* <div
+        style={{
+          backgroundImage: `url(${batik})`,
+        }}
+        className='absolute inset-0 h-full w-screen bg-[length:15rem] bg-right bg-repeat'
+      ></div> */}
       <Swiper
         modules={[Navigation, Pagination, EffectCoverflow]}
         effect={'coverflow'}
         grabCursor={false}
         centeredSlides={true}
         loop={true}
-        spaceBetween={'-100'}
+        spaceBetween={'-50'}
         slidesPerView={'1.1'}
         speed={700}
         coverflowEffect={{
           rotate: 30,
-          stretch: -15,
+          stretch: 0,
           depth: 300,
           modifier: 2,
           scale: 0.75,
@@ -34,7 +39,12 @@ const SwiperBig = ({ next, prev, imageList, isSwiperBig }) => {
         }}
         breakpoints={{
           640: {
+            slidesPerView: 1.3,
+            spaceBetween: -30,
+          },
+          768: {
             slidesPerView: 2,
+            spaceBetween: -30,
           },
         }}
         navigation={{
@@ -49,26 +59,29 @@ const SwiperBig = ({ next, prev, imageList, isSwiperBig }) => {
           const { realIndex } = swiperCore
           setActiveIndex(realIndex)
         }}
-        className='swiper_container overflow-visible'
+        className='swiper_container py-10'
       >
-        {(imageList ?? hero).map((swiper, i) => (
-          <SwiperSlide key={i} className=''>
+        {imageList.map((swiper, i) => (
+          <SwiperSlide
+            key={i}
+            className={`relative aspect-square  overflow-hidden rounded-lg bg-slate-500 shadow-md shadow-black/50 transition-all duration-1000 sm:aspect-video ${
+              i === activeIndex ? '' : 'blur-sm'
+            }`}
+          >
             <div
               style={{
                 backgroundImage: `url(${swiper.image})`,
               }}
-              className={`mb-16 flex aspect-square rounded-xl bg-cover bg-center shadow-xl shadow-black/50 brightness-75 sm:aspect-video ${
-                i === activeIndex ? '' : 'blur-sm'
-              }`}
+              className={`h-full w-full bg-cover bg-center brightness-75 `}
             ></div>
             <div
               className={`${
                 i === activeIndex
-                  ? 'bottom-4 opacity-100'
+                  ? '-bottom-[75%] opacity-100 sm:-bottom-[70%]'
                   : '-bottom-full opacity-0'
-              } absolute w-full flex-col items-center justify-center rounded-xl p-2 text-white transition-all delay-150 duration-500 ease-in`}
+              } absolute h-full w-full flex-col items-center justify-center bg-emerald-700/30 px-4 text-white transition-all delay-150 duration-500 ease-in md:px-12`}
             >
-              <h4 className='md:text-2xl'>{swiper.title}</h4>
+              <h4 className='py-2 md:text-2xl'>{swiper.title}</h4>
               <p className='text-xs md:text-base'>{swiper.text}</p>
             </div>
           </SwiperSlide>
