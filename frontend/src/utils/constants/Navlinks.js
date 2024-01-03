@@ -13,7 +13,7 @@ export const headerNav = [
   },
   {
     id: 'search',
-    to: 'search',
+    to: 'login',
     title: '',
     icon: 'mdi:magnify-expand',
   },

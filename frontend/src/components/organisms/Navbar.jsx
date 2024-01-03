@@ -42,9 +42,12 @@ const Navbar = ({ isBlog }) => {
   }
 
   useEffect(() => {
-    document.getElementById('mainApp').classList.toggle('fixed', isOpen)
-    return () => {
-      document.getElementById('mainApp').classList.remove('fixed')
+    const mainAppElement = document.getElementById('mainApp')
+    if (mainAppElement) {
+      mainAppElement.classList.toggle('fixed', isOpen)
+      return () => {
+        mainAppElement.classList.remove('fixed')
+      }
     }
   }, [isOpen, buttonKey])
 
