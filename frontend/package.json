@@ -1,6 +1,6 @@
 {
   "homepage": "https://winzart.github.io/darsal-v2",
-  "name": "frontend",
+  "name": "darsal",
   "private": true,
   "version": "0.0.0",
   "type": "module",
