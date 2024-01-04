@@ -56,7 +56,7 @@ const Navbar = ({ isBlog }) => {
       className={`${
         styles.padding
       } fixed z-20 flex h-20 w-screen items-center justify-center text-white shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:h-36 ${
-        (color && 'bg-emerald-700') || (isBlog && 'bg-emerald-700')
+        color || isBlog ? 'bg-emerald-700' : ''
       } ${visible && '-translate-y-full'}`}
     >
       <nav className='flex w-full items-center justify-between'>
@@ -65,7 +65,7 @@ const Navbar = ({ isBlog }) => {
             to='/'
             className='flex items-center gap-2'
             onClick={() => {
-              closeMenu()
+              setIsOpen(false)
               window.scrollTo(0, 0)
             }}
           >
@@ -81,15 +81,19 @@ const Navbar = ({ isBlog }) => {
         </div>
         <div
           className={`absolute left-0 top-0 flex w-full ${
-            isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-          } h-screen flex-col gap-8 bg-slate-500 p-8 pt-24 duration-500 md:static md:h-auto md:-translate-x-0 md:translate-y-0 md:items-end md:gap-2 md:bg-inherit md:p-0 md:opacity-100`}
+            isOpen
+              ? 'visible translate-y-0 opacity-100'
+              : 'invisible -translate-y-full opacity-0'
+          } h-screen flex-col gap-8 bg-slate-500 p-8 pt-24 transition-all duration-500 ease-in-out md:static md:h-auto md:-translate-x-0 md:translate-y-0 md:items-end md:gap-2 md:bg-inherit md:p-0 md:opacity-100`}
         >
           <ul className='flex items-center justify-center gap-5 md:justify-end'>
             {headerNav.slice(0, 3).map((nav) => (
               <li key={nav.id} className='cursor-pointer leading-6'>
                 <NavLink
                   to={nav.to}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    setIsOpen(false)
+                  }}
                   className='navlink group'
                 >
                   <div className='flex w-fit items-center group-hover:after:w-full'>
@@ -106,7 +110,9 @@ const Navbar = ({ isBlog }) => {
               <li key={nav.id} className='cursor-pointer'>
                 <NavLink
                   to={nav.to}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    setIsOpen(false)
+                  }}
                   className='navlink group'
                 >
                   <div className='w-fit whitespace-nowrap group-hover:after:w-full'>
